@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tooling-deployment
+  namespace: {youtrNamespace}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tooling
+  template:
+    metadata:
+      labels:
+        app: tooling
+    spec:
+      containers:
+        - name: tooling
+          image: {yourImageName}
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 3000
