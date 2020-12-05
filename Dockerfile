@@ -1,7 +1,5 @@
 FROM ubuntu:20.10
 
-# COPY mysql-apt-config_0.8.16-1_all.deb .
-
 RUN apt update && \
     apt install nodejs -y && \
     apt install net-tools -y && \

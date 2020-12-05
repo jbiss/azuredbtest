@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tooling-deployment
-  namespace: {youtrNamespace}
+  # namespace: {youtrNamespace}
+  namespace: lifedepository
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tooling
-          image: {yourImageName}
+          image: jbissett/ubuntutools:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 3000
