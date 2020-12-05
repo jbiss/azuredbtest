@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
         - name: tooling
+          # change to your iamge name if you rebuilt
           image: jbissett/ubuntutools:latest
           imagePullPolicy: Always
           ports:
